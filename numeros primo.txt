@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package atividadesjava;
+
+import java.util.Scanner;
+
+/**
+ * @author Rafael Sousa Ribeiro
+ *
+ */
+public class Primo {
+	public static void main(String[] args) {
+		int primo = Integer.valueOf( args[0] );
+		boolean isPrimo = true;
+		int divisor = 0;
+		for (int i = 2; i <= primo; i++) {
+			if ( ( (primo % i) == 0) && (i != primo) ) {
+				isPrimo = false;
+				divisor = i;
+				break;
+			}
+		}
+		if (isPrimo) {
+			System.out.println( "é Primo" );
+		} else {
+			System.out.println( "Não é Primo --> " + divisor );
+		}
+	}
+}
